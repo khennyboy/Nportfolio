@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .change{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <p>Hello, <span>world</span>!</p>
+        <h3 class="fullname">
+            <a href="#" class="link1">SheriffBaba</a>
+        </h3>
+      </div>
+      
+      <div id="container2">
+        <p>Hello, <span>world</span>!</p>
+        <h3 class="fullname change">
+            <a href="#" class="link2">SheriffBABA</a>
+        </h3>
+      </div>
+      <div class="wrapper">
+        <h3>I am a front end web developer</h3>
+      </div>
+      <button class="click">Click me</button>
+</body>
+<script>
+    class name{
+        _data = 'sheriff'
+    }
+    class fullname extends name{
+        _aus = 'lateef';
+        come(){
+            console.log(this._data)
+            return this._data
+        }
+    }
+    const get = new fullname()
+    console.log(get.come())
+    let container_1 = Array.from(document.querySelector('#container1').querySelectorAll('*'))
+    let container_2 = Array.from(document.querySelector('#container2').querySelectorAll('*'))
+
+    console.log(container_1)
+    console.log(container_2)
+
+    container_2.forEach((each, i)=>{
+        let curEl = container_1[i]
+        if(!each.isEqualNode(curEl) && each.firstChild?.nodeValue.trim()!==''){
+            console.log(curEl)
+            curEl.textContent = each.textContent
+        }
+        if(!each.isEqualNode(curEl)){
+            Array.from(each.attributes).forEach((attr)=>{
+                curEl.setAttribute(attr.name, attr.value)
+            })
+        }
+    }) 
+
+    console.log(container_1)
+    console.log(container_2)
+
+class Khenny{
+    constructor(){
+        this._handleHandler()
+    }
+     x = document.querySelector('.wrapper');
+     y = document.querySelector('.click')
+     toggle(){
+        this.x.classList.add('change')
+        console.log(this)
+     }
+    _handleHandler(){
+        this.y.addEventListener('click', ()=>this.toggle())
+    }
+}
+const Profile = new Khenny()
+
+</script>
+</html>
