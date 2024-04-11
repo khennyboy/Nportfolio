@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .add{
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <h3>I am abdullateef</h3>
+    <button  class="btn">Regular function</button>
+    <button  class="btn2">Click me in</button>
+    <button  class="btn3">Arrow function</button>
+    <input type="text" name="myInput" id="inputText">
+    </div>
+</body>
+<script>
+    function myFunction(e,c, b){
+        console.log(e)
+        console.log(c)
+        console.log(this.a)
+        console.log(b.type)
+    }
+    function myFunction2(e){
+        console.log(e.target)
+        console.log(this)
+    }
+    const myFunction3 =(x,e)=>{
+        console.log(x)
+        console.log(e)
+        console.log(this)
+    }
+    let x = document.querySelector('.btn')
+    let y = document.querySelector('.btn2')
+    let p = document.querySelector('.btn3')
+    let z = document.querySelector('input')
+    x.addEventListener('click',(e)=> myFunction2(e))
+
+    y.addEventListener('click', myFunction.bind({a:2}, 4, 6))
+
+    p.addEventListener('click', (ev)=>{
+        myFunction3(3,ev)
+    })
+    
+    let u =  document.querySelector('h3').innerHTML
+
+    z.addEventListener('input', function(e){
+        const x = e.target.value
+        document.querySelector('h3').innerHTML = ''
+        document.querySelector('h3').innerHTML = u + x
+    })
+    z.addEventListener('blur', function(e){
+        this.classList.remove('add')
+    })
+    z.addEventListener('focus', function(e){
+        this.classList.add('add')
+    })
+
+    let parent  = document.querySelector('.wrapper').querySelectorAll('*')
+    console.log(parent)
+    console.log(z.attributes)
+    
+</script>
+</html>
