@@ -103,7 +103,7 @@ function loadImage(){
     let src = image.dataset.src
     image.src = src
     image.addEventListener('load', function(){
-        this.style.display = 'block'
+        this.style.visibility = 'visible'
     })
 }
 loadImage()

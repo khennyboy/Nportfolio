@@ -408,5 +408,5 @@ footer h3{
 }
 /* to only display the image after it has been loaded */
 .header_content .right img{
-    display: none;
+    visibility: hidden;
 }
