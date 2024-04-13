@@ -9,25 +9,31 @@ body{
     color: var(--textColor);
     font-family:Arial, Helvetica, sans-serif
 }
-
+::-webkit-scrollbar {width: 1rem;}
+::-webkit-scrollbar-track {background: #242526;}
+::-webkit-scrollbar-thumb {background: #3A3B3C;}
 [data-theme='dark']{
     --textColor : #ffff;
-    --dropBgColor : #280c74;
     --dropColorHover:#261062;
-    --profileImage: rgb(12, 12, 57);
+    --dropBgColor: rgb(12, 12, 57);
     --labelHoverColor : rgb(29, 29, 105);
     --backgroundColor : #150e28;
     --liHover: rgb(33, 33, 135);
+    --border-color: #ff26b9;
+    --sectionBgColor: rgba(197, 166, 237, 0.05);
 }
 
-/* [data-theme='light'] {
-    --textColor: #000;
-    --navColor: #fff;
-    --dropContentColorr: #f0f0f0;
-    --labelHoverColor: #333;
-    --backgroundColor: #fff;
-    --liHover: #ccc;
-} */
+[data-theme='light']{
+    --textColor: #000000; 
+    --dropColorHover: #b4b4b4; 
+    --dropBgColor: #ffffff; 
+    --labelHoverColor: #0000ff; 
+    --backgroundColor: #ffffff; 
+    --liHover: #0066ff; 
+    --border-color: #ff26b9; 
+    --sectionBgColor: rgba(197, 166, 237, 0.05); 
+}
+
 a{
     text-decoration: none;
     display: inline-block;
@@ -42,13 +48,22 @@ button{
     background:none;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
+    color: var(--textColor);
+}
+.sectionDiv{
+    margin: 3rem 0;
+}
+.sectionDiv h3{
+    padding-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
 }
 .specialBtn {
     min-width: 172px;
     padding: 10px;
     flex-shrink: 0;
     border-radius: 4px ;
-    color: #fff;
     background-image: linear-gradient(-90deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99%, #fe34b9 100%);
     font-size: 20px;
     transition: 0.3s ease-in-out;
@@ -56,16 +71,25 @@ button{
     align-items: center;
     gap: 10px;
     font-weight: bold;
+    color: #f8f8f8;
+}
+.specialBtn .icons{
+    color: #e2dcdc;;
 }
 
-
-.specialBtn:hover{
-    background-image: linear-gradient(-90deg, #9a5de9 0%, #de65fc 56.42%, #ff26b9 99%, #fe34b9 100%);
+.specialBtn:hover {
+    background-image: linear-gradient(-90deg, #b53dff 0%, #fa34fe 56.42%, #ff26b9 99%, #fe34b9 100%);
+    color: #ffffff; 
+    transform: scale(1.02); 
 }
+
 .wrapper{
     padding: 0 8rem;
 }
-
+.icons{
+    color: var(--iconsColor);
+    font-size: 1.5rem;
+ }
 nav.wrapper{
     position: fixed;
     display: flex;
@@ -74,18 +98,15 @@ nav.wrapper{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    padding-top: 3rem ;
+    padding-top: 3rem;
 }
 nav > h3{
     font-size: 2rem;
+    padding-bottom: 0;
 }
-.icons{
-    color: var(--textColor);
-    font-size: 1.5rem;
- }
+
 nav ul{
     display: flex;
-    align-items: flex-start;
     gap: 1.3rem;
 }
 
@@ -93,13 +114,15 @@ nav ul li{
     list-style-type: none;
     transition: 0.3s ease-in-out;
 }
-nav ul li a{
+.liveUrl{
     padding: 7px 1rem;
+    transition: 0.3s ease-in-out;
 }
-nav ul li a:hover, .dropDownBtn:hover{
+.liveUrl:hover, .dropBtn:hover, .dropDownBtn:hover{
     background-color: var(--liHover);
     border-radius: 3px;
 }
+
 
 li.theme{
     position: relative;
@@ -107,6 +130,7 @@ li.theme{
 .dropDownBtn{
     padding: 7px 1rem;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 .dropDownContent{
     position: absolute;
@@ -114,7 +138,8 @@ li.theme{
     min-width: 120px;
     border-radius: 5px;
     top: 110%;
-    left: -10px;
+    left: -1rem;
+    display: none;
 }
  .dropBtn{
     display: block;
@@ -123,7 +148,7 @@ li.theme{
     align-items: center;
     gap: 10px;
     padding: 5px 20px 5px 5px;
-    transition: 0.3 ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .dropBtn:hover{
     background-color:  var(--dropColorHover);
@@ -133,7 +158,7 @@ li.theme{
     font-weight: bold;
 }
 .dropDownContent button:not(:last-child){
-    border-bottom: 1px solid var(--textColor);
+    border-bottom: 1px solid var(--border-color);
 }
 .dropDownContent button:first-child{
     border-top-left-radius: inherit;
@@ -149,6 +174,9 @@ li.theme{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .headerBtns{
@@ -173,7 +201,6 @@ li.theme{
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
-    background-color: var(--profileImage);
     box-shadow: -8px 0 5px rgb(201, 192, 192), 0px 8px 5px rgb(201, 192, 192), 8px 0 5px rgb(201, 192, 192), 0px -8px 5px rgb(201, 192, 192);
     overflow: hidden;
     display: flex;
@@ -185,30 +212,196 @@ li.theme{
     width: 25rem;
     height: 25rem;
 }
+
 .fixedImage{
     position: absolute;
     z-index: -100;
 }
-
 .fixedImage1{
-    top: -4rem;
-    right: 8rem;
-    opacity: 0.5;
+    left: 10%;
+    filter: opacity(0.4);
+    width: 100%;
+    display: block;
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 .fixedImage2{
-    top: 50%;
-    right: 50%;
+    right: 40%;
+    bottom: 20%;
 }
 .fixedImage3{
-    top: 70%;
-    right: 60%;
-}
-.fixedImage4{
+    left: 20%;
     top: 20%;
-    left: 30%;
 }
 .fixedImage4{
-    bottom: 20%;
-    right: 30%;
+    left: 40%;
+    top: 30%;
 }
+
+.fixedImage5{
+    right: 40%;
+    top: 20%;
+}
+
+
+
 /* skills section */
+
+.skills{
+    padding: 2rem 2rem 4rem 2rem;
+    background: var(--sectionBgColor);
+}
+.allSkills{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
+    border-radius: 5px;
+    padding: 2rem 0;
+    row-gap: 2rem;
+    justify-content: space-evenly;
+    border: 1px solid var(--border-color);
+}
+.skillsGroup{
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    padding: 1rem 10px;
+}
+
+.skillsGroup div:first-child img{
+   width: 100%;
+   height: 150px;
+   object-fit: cover;
+   display: block;
+}
+.nameExperience{
+    padding-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* another section */
+
+.project{
+    position: relative;
+}
+.project > img{
+    position: absolute;
+    bottom: -4rem;
+    right: 1rem;
+    z-index: -100;
+    opacity: 0.5;
+}
+
+.project {
+    background: var(--sectionBgColor);
+    padding: 2rem 2rem 4rem 2rem;
+}
+.allProject{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: auto;
+    border-radius: 5px;
+    row-gap: 3rem;
+    justify-content: space-evenly;
+}
+.eachProject{
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 1rem 0;
+}
+.eachProject > div{
+    width: 90%;
+    margin: 0 auto;
+}
+.projectImage{
+    height: 20rem;
+    width: 100%;
+    overflow: hidden;
+}
+.projectImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.projectNameUrl{
+    padding-top: 1rem;
+}
+.projectNameUrl span{
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    padding-bottom: 1rem;
+}
+
+/* contact section */
+.contactPage{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-wrap: wrap;
+}
+
+.contactPage .left{
+    width: 40%;
+}
+
+.contactPage .left h3{
+    font-size: 3rem;
+    padding-bottom: 3rem;
+}
+.contactPage .left p{
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+.contactPage .right{
+    width: 40%;
+    display: block;
+    position: relative;
+}
+.contactPage .right form input, .right form textarea{
+    display: block;
+    border: none;
+    outline: none;
+    background: inherit;
+    color: var(--textColor);
+    font-size: 1.1rem;
+}
+.contactPage .right form input{
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 1rem 0 0.5rem 0.5rem;
+}
+.contactPage .right form input::placeholder{
+    font-size: initial;
+}
+
+.contactPage .right textarea{
+   border: 1px solid var(--border-color);
+   resize: vertical;
+   width: 100%;
+   height: 8rem;
+   border-radius: 5px;
+   padding: 10px;
+   margin: 4rem 0 2rem;
+}
+.right form button{
+    position: absolute;
+    right: 0;
+}
+
+footer{
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer h3{
+    padding-top: 2rem;
+    padding-bottom: 0;
+}
+

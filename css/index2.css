@@ -1,12 +1,180 @@
+/* tablet styling */
 @media screen and (max-width:867px){
-
-}
-@media screen and (max-width:475px) {
-
-}
-@media screen and (min-width: 0px) and (max-width: 300px){
-
-}
-@media screen and (min-width: 869px) and (max-width: 1200px){
+    html{
+        font-size: 70%;
+    }
+    .wrapper{
+        padding: 0 2rem;
+    }
+    .dropDownContent{
+        left: -7rem;
+    }
+    .header_content{
+        flex-direction:column-reverse;
+        justify-content: center;
+        row-gap: 1rem;
+    }
+    .header_content .left{
+        text-align: center;
+    }
+    .header_content .left h3 br{
+        display: none;
+    }
+    .header_content .left h3{
+        padding: 1rem 0;
+        font-size: 2.3rem;
+    }
+    .header_content .left p br{
+        display: none;
+    }
     
+    .headerBtns{
+        justify-content: space-evenly;
+    }
+   
+    /* another section */
+    .allSkills{
+        grid-template-columns: 45% 45%;
+    }
+    /* another section */
+    .allProject{
+        grid-template-columns: 75%;
+    }
+    /* another section */
+    .contactPage .right form .submitBtn{
+        font-size: 15px;
+        justify-content: center;
+    }
+    .contactPage{
+        flex-direction: column;
+        align-items:flex-start;
+        margin-bottom: 4rem;
+    }
+    .contactPage .left{
+        width: 90%;
+        padding-bottom: 3rem;
+    }
+    .contactPage .right{
+        width: 75%;
+    }
+    .contactPage .left p, .header_content .left p{
+        font-size: 1.4rem;
+    }
+   
+}
+/* mobile styling */
+@media screen and (max-width:475px) {
+   
+    html{
+        font-size: 75%;
+    }
+  
+    nav.wrapper{
+        flex-direction: column;
+        row-gap: 10px;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    .dropDownContent{
+        left: -4rem;
+    }
+  
+    .header_content .left h3{
+        font-size: 2rem;
+    }
+   
+    .header_content{
+        row-gap: 1.2rem;
+    }
+    .specialBtn{
+        min-width: 140px;
+    }
+    /* another section */
+    .allSkills{
+        grid-template-columns: 80%;
+    }
+    /* another section */
+    .allProject{
+        grid-template-columns: 90%;
+    }
+    /* another section */
+    .contactPage{
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+    .contactPage .right{
+        width: 90%;
+    }
+
+    .header_content .right{
+        margin-top: 3rem;
+    }
+    .fixedImage1{
+        right: initial;
+        left: 10%;
+        opacity: 0.3;
+    }
+    .fixedImage3{
+        top: 20%;
+        left: 15%;
+    }
+    .fixedImage2{
+        bottom: 5%;
+    }
+}
+/* very small gadget */
+@media screen and (min-width: 0px) and (max-width: 300px){
+    .headerBtns{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+    }
+    .dropDownContent{
+        left: -7rem;
+    }
+    .header_content .right{
+        margin-top: 3rem;
+    }
+    .fixedImage3{
+        left: 10%;
+    }
+    .fixedImage6{
+        bottom: 5%;
+        right: 5%;
+    }
+    .fixedImage5{
+        bottom: 5%;
+    }
+   
+}
+/* large desktop styling */
+@media screen and (min-width: 869px) and (max-width: 1200px){
+    .wrapper{
+        padding: 0 4rem;
+    }
+    html{
+        font-size: 80%;
+    }
+    .dropDownContent{
+        left: -4rem;
+    }
+    .fixedImage3{
+        top: 75%;
+    }
+}
+/* ultra large desktop */
+@media screen and (min-width: 1201px) and (max-width: 1500px){
+    .wrapper{
+        padding: 0 5rem;
+    }
+    html{
+        font-size: 90%;
+    }
+}
+@media screen and (max-width:867px) and  (orientation: landscape){
+    .header_content .right {
+        height: 16rem;
+        width: 16rem;
+        margin-top: 3rem;
+    }
 }
