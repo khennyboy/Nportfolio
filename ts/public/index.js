@@ -1,4 +1,5 @@
 import { Invoice } from './classes/invoice.js';
+import { ListTemplate } from './classes/listContainer.js';
 import { Payment } from './classes/payment.js';
 let greet = () => {
     return ('hello world');
@@ -19,15 +20,20 @@ const tofrom = document.querySelector('#tofrom');
 const details = document.querySelector('#details');
 const amount = document.querySelector('#amount');
 let doc;
+const ul = document.querySelector('ul');
+const list = new ListTemplate(ul);
 form.addEventListener('submit', function (e) {
     e.preventDefault();
+    let values; //use of tuples
+    values = [tofrom.value, details.value, amount.valueAsNumber];
     if (type.value === 'invoice') {
-        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+        doc = new Invoice(...values);
     }
-    else {
-        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    if (type.value === 'payment') {
+        doc = new Payment(...values);
     }
-    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
+    console.log(doc);
+    list.render(doc, type.value, 'end');
 });
 let invoices = [];
 const invOne = new Invoice('mario', 'work on the mario website', 200);
@@ -47,3 +53,19 @@ const me = {
     }
 };
 me.spend(20);
+// Generics
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let docOne = addUID({ name: 'hello', age: 40 });
+// Enums
+var resourceType;
+(function (resourceType) {
+    resourceType[resourceType["BOOK"] = 0] = "BOOK";
+    resourceType[resourceType["AUTHOR"] = 1] = "AUTHOR";
+    resourceType[resourceType["FILM"] = 2] = "FILM";
+    resourceType[resourceType["DIRECTOR"] = 3] = "DIRECTOR";
+    resourceType[resourceType["PERSON"] = 4] = "PERSON";
+})(resourceType || (resourceType = {}));
+console.log(resourceType);

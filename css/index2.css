@@ -34,9 +34,12 @@
    
     /* another section */
     .allSkills{
-        grid-template-columns: 45% 45%;
+        grid-template-columns: 48% 48%;
     }
     /* another section */
+    .project{
+        padding: 2rem 1rem 4rem 1rem;
+    }
     .allProject{
         grid-template-columns: 75%;
     }
@@ -68,6 +71,9 @@
     html{
         font-size: 75%;
     }
+    .wrapper{
+        padding: 0 1rem;
+    }
   
     nav.wrapper{
         flex-direction: column;
@@ -91,11 +97,15 @@
     }
     /* another section */
     .allSkills{
-        grid-template-columns: 80%;
+        grid-template-columns: 95%;
     }
     /* another section */
+   
     .allProject{
-        grid-template-columns: 90%;
+        grid-template-columns: 100%;
+    }
+    .eachProject > div{
+        width: 95%;
     }
     /* another section */
     .contactPage{
@@ -110,9 +120,10 @@
         margin-top: 3rem;
     }
     .fixedImage1{
-        right: initial;
-        left: 10%;
-        opacity: 0.3;
+        left: 0;
+        top: 10%;
+        height: 100%;
+        filter: opacity(0.2);
     }
     .fixedImage3{
         top: 20%;
@@ -121,6 +132,7 @@
     .fixedImage2{
         bottom: 5%;
     }
+  
 }
 /* very small gadget */
 @media screen and (min-width: 0px) and (max-width: 300px){
@@ -150,7 +162,7 @@
 /* large desktop styling */
 @media screen and (min-width: 869px) and (max-width: 1200px){
     .wrapper{
-        padding: 0 4rem;
+        padding: 0 3rem;
     }
     html{
         font-size: 80%;
@@ -160,6 +172,9 @@
     }
     .fixedImage3{
         top: 75%;
+    }
+    .project{
+        padding: 2rem 1rem 4rem 1rem;
     }
 }
 /* ultra large desktop */

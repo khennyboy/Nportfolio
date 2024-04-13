@@ -14,9 +14,7 @@ body{
 ::-webkit-scrollbar-thumb {background: #3A3B3C;}
 [data-theme='dark']{
     --textColor : #ffff;
-    --dropColorHover:#261062;
-    --dropBgColor: rgb(12, 12, 57);
-    --labelHoverColor : rgb(29, 29, 105);
+    --dropBgColor: rgb(19, 19, 97);
     --backgroundColor : #150e28;
     --liHover: rgb(33, 33, 135);
     --border-color: #ff26b9;
@@ -25,11 +23,9 @@ body{
 
 [data-theme='light']{
     --textColor: #000000; 
-    --dropColorHover: #b4b4b4; 
-    --dropBgColor: #ffffff; 
-    --labelHoverColor: #0000ff; 
+    --dropBgColor:  rgb(19, 19, 97);
     --backgroundColor: #ffffff; 
-    --liHover: #0066ff; 
+    --liHover: rgb(33, 33, 135); 
     --border-color: #ff26b9; 
     --sectionBgColor: rgba(197, 166, 237, 0.05); 
 }
@@ -121,6 +117,7 @@ nav ul li{
 .liveUrl:hover, .dropBtn:hover, .dropDownBtn:hover{
     background-color: var(--liHover);
     border-radius: 3px;
+    color: white;
 }
 
 
@@ -141,6 +138,10 @@ li.theme{
     left: -1rem;
     display: none;
 }
+
+.showDropContent{
+    display: block;
+}
  .dropBtn{
     display: block;
     display: flex;
@@ -149,12 +150,14 @@ li.theme{
     gap: 10px;
     padding: 5px 20px 5px 5px;
     transition: 0.3s ease-in-out;
+    color: white;
 }
-.dropBtn:hover{
-    background-color:  var(--dropColorHover);
+
+.dropBtnClickColor{
+    background-color: #21252a;
 }
+
 .dropBtn span{
-    color: var(--textColor);
     font-weight: bold;
 }
 .dropDownContent button:not(:last-child){
@@ -219,10 +222,10 @@ li.theme{
 }
 .fixedImage1{
     left: 10%;
-    filter: opacity(0.4);
+    filter: opacity(0.2);
     width: 100%;
     display: block;
-    aspect-ratio: 1;
+    height: 100%;
     object-fit: cover;
 }
 .fixedImage2{
@@ -234,12 +237,12 @@ li.theme{
     top: 20%;
 }
 .fixedImage4{
-    left: 40%;
+    left: 20%;
     top: 30%;
 }
 
 .fixedImage5{
-    right: 40%;
+    left: 10%;
     top: 20%;
 }
 
@@ -248,23 +251,21 @@ li.theme{
 /* skills section */
 
 .skills{
-    padding: 2rem 2rem 4rem 2rem;
+    padding: 2rem 1rem 4rem 1rem;
     background: var(--sectionBgColor);
 }
 .allSkills{
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 32% 32% 32%;
     grid-template-rows: auto;
     border-radius: 5px;
     padding: 2rem 0;
     row-gap: 2rem;
     justify-content: space-evenly;
-    border: 1px solid var(--border-color);
 }
 .skillsGroup{
     border-radius: 5px;
     border: 1px solid var(--border-color);
-    width: 100%;
     padding: 1rem 10px;
 }
 
@@ -277,6 +278,7 @@ li.theme{
 .nameExperience{
     padding-top: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
 }
 
 /* another section */
@@ -298,7 +300,7 @@ li.theme{
 }
 .allProject{
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: 48% 48%;
     grid-template-rows: auto;
     border-radius: 5px;
     row-gap: 3rem;
@@ -404,4 +406,7 @@ footer h3{
     padding-top: 2rem;
     padding-bottom: 0;
 }
-
+/* to only display the image after it has been loaded */
+.header_content .right img{
+    display: none;
+}

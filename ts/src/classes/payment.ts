@@ -14,10 +14,5 @@ export class Payment implements hasFormatter {
     }
 }
 
-// let invOne:hasFormatter
 
-// invOne = new Invoice('mario', 'work on the mario website', 200)
-// console.log(invOne)
 
-// let invoices: (Invoice|Invoice2)[] = []
-// invoices.push(invOne)
