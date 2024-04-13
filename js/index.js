@@ -111,10 +111,10 @@ loadImage()
 // add animation effect
 const sr = ScrollReveal({
     distance :'45px',
-    duration:2700,
+    duration:2000,
     reset: true
 })
-sr.reveal('.header_content .right', {delay:350, origin:'left'})
+sr.reveal('.wrapper', {delay:200, origin:'bottom'})
 
 // const navHeight = document.querySelector('nav').getBoundingClientRect().height
 // console.log(navHeight)
