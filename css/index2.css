@@ -123,18 +123,11 @@
         margin-top: 3rem;
     }
     .fixedImage1{
-        left: 0;
-        top: 10%;
+        left: 0%;
+        top: 5%;
         height: 100%;
-        filter: opacity(0.2);
     }
-    .fixedImage3{
-        top: 20%;
-        left: 15%;
-    }
-    .fixedImage2{
-        bottom: 5%;
-    }
+  
   
 }
 /* very small gadget */

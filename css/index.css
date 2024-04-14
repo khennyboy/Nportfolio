@@ -226,8 +226,8 @@ li.theme{
     z-index: -100;
 }
  .fixedImage1{
-    left: 10%;
-    filter: opacity(0.2);
+    left: 0%;
+    filter: opacity(0.3);
     width: 100%;
     display: block;
     height: 100%;
@@ -276,7 +276,7 @@ li.theme{
 
 .skillsGroup div:first-child img{
    width: 100%;
-   height: 150px;
+   height: 200px;
    object-fit: cover;
    display: block;
 }
