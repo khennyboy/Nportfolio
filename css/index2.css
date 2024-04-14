@@ -70,6 +70,9 @@
         bottom: -20%;
         right: 0%;
     }
+    .contactPage .right form input, .right form textarea{
+        font-size: 1.3rem;
+    }
 }
 /* mobile styling */
 @media screen and (max-width:475px) {
@@ -133,7 +136,9 @@
         top: 5%;
         height: 100%;
     }
-  
+    .contactPage .right form input, .right form textarea{
+        font-size: 1.4rem;
+    }
 }
 /* very small gadget */
 @media screen and (min-width: 0px) and (max-width: 300px){
@@ -165,6 +170,9 @@
     }
     .project{
         padding: 2rem 1rem 4rem 1rem;
+    }
+    .contactPage .right form input, .right form textarea{
+        font-size: 1.3rem;
     }
 }
 /* ultra large desktop */

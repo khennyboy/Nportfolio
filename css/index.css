@@ -386,6 +386,7 @@ li.theme{
    border-radius: 5px;
    padding: 10px;
    margin: 4rem 0 2rem;
+   overflow: auto;
 }
 .right form button{
     position: absolute;
