@@ -99,7 +99,7 @@ document.body.addEventListener('click', function(e){
 
 // only display image after it has been loaded
 function loadImage(){
-    let image = document.querySelector('.header_content .right img')
+    let image = document.querySelector('.header_content .right .profileImage')
     let src = image.dataset.src
     image.src = src
     image.addEventListener('load', function(){

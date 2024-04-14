@@ -191,7 +191,9 @@ li.theme{
     display: flex;
     gap: 1rem;
 }
-
+.header_content .left{
+    position: relative;
+}
 .header_content .left h3{
     font-size: 3rem;
     padding-bottom: 4rem;
@@ -215,12 +217,12 @@ li.theme{
     justify-content: center;
     align-items: center;
 }
-.header_content .right img{
+.header_content .right .profileImage{
     object-fit: cover;
     width: 25rem;
     height: 25rem;
 }
-
+/* absolute images */
 .fixedImage{
     position: absolute;
     z-index: -100;
@@ -232,25 +234,15 @@ li.theme{
     display: block;
     height: 100%;
     object-fit: cover;
-}/*
-.fixedImage2{
-    right: 40%;
-    bottom: 20%;
 }
-.fixedImage3{
-    left: 20%;
-    top: 20%;
+.starrp{
+    top: -10%;
+    left: -10%;
 }
-.fixedImage4{
-    left: 20%;
-    top: 30%;
+.star1{
+    bottom: -10%;
+    right: -10%;
 }
-
-.fixedImage5{
-    left: 10%;
-    top: 20%;
-}
- */
 
 
 /* skills section */
