@@ -388,6 +388,9 @@ li.theme{
    margin: 4rem 0 2rem;
    overflow: auto;
 }
+.contactPage .right textarea::-webkit-scrollbar{
+    display: none;
+}
 .right form button{
     position: absolute;
     right: 0;
