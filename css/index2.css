@@ -88,6 +88,9 @@
     .header_content .left h3{
         font-size: 2rem;
     }
+    .header_content .left p{
+        font-size: 1.13rem;
+    }
    
     .header_content{
         row-gap: 1.2rem;

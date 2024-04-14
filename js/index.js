@@ -114,7 +114,7 @@ const sr = ScrollReveal({
     duration:2000,
     reset: true
 })
-sr.reveal('.wrapper', {delay:200, origin:'bottom'})
+sr.reveal('.wrapper', {delay:200, origin:'left'})
 
 // const navHeight = document.querySelector('nav').getBoundingClientRect().height
 // console.log(navHeight)

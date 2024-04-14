@@ -16,18 +16,20 @@ body{
     --textColor : #ffff;
     --dropBgColor: rgb(19, 19, 97);
     --backgroundColor : #150e28;
-    --liHover: rgb(33, 33, 135);
+    --liHoverIconsColor: rgb(33, 33, 135);
     --border-color: #ff26b9;
     --sectionBgColor: rgba(197, 166, 237, 0.05);
+    --iconsColorHover: white;
 }
 
 [data-theme='light']{
     --textColor: #000000; 
     --dropBgColor:  rgb(19, 19, 97);
     --backgroundColor: #ffffff; 
-    --liHover: rgb(33, 33, 135); 
+    --liHoverIconsColor: rgb(33, 33, 135); 
     --border-color: #ff26b9; 
     --sectionBgColor: rgba(197, 166, 237, 0.05); 
+    --iconsColorHover: white;
 }
 
 a{
@@ -83,8 +85,11 @@ button{
     padding: 0 8rem;
 }
 .icons{
-    color: var(--iconsColor);
     font-size: 1.5rem;
+    color: var(--icons-color);
+ }
+ .dropBtn .icons{
+    color: white;
  }
 nav.wrapper{
     position: fixed;
@@ -115,9 +120,9 @@ nav ul li{
     transition: 0.3s ease-in-out;
 }
 .liveUrl:hover, .dropBtn:hover, .dropDownBtn:hover{
-    background-color: var(--liHover);
+    background-color: var(--liHoverIconsColor);
     border-radius: 3px;
-    color: white;
+    color: var(--iconsColorHover);
 }
 
 
@@ -154,7 +159,7 @@ li.theme{
 }
 
 .dropBtnClickColor{
-    background-color: #21252a;
+    background-color:rgb(15, 15, 76);
 }
 
 .dropBtn span{
@@ -220,14 +225,14 @@ li.theme{
     position: absolute;
     z-index: -100;
 }
-.fixedImage1{
+ .fixedImage1{
     left: 10%;
     filter: opacity(0.2);
     width: 100%;
     display: block;
     height: 100%;
     object-fit: cover;
-}
+}/*
 .fixedImage2{
     right: 40%;
     bottom: 20%;
@@ -245,7 +250,7 @@ li.theme{
     left: 10%;
     top: 20%;
 }
-
+ */
 
 
 /* skills section */
