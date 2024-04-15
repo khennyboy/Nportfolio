@@ -206,6 +206,9 @@ li.theme{
     padding-bottom:3rem;
     line-height: 1.3;
 }
+.dark{
+    position: relative;
+}
 
 .header_content  .right{
     width: 20rem;

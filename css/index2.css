@@ -73,6 +73,9 @@
     .contactPage .right form input, .right form textarea{
         font-size: 1.3rem;
     }
+    nav.wrapper{
+        padding-top: 2rem;
+    }
 }
 /* mobile styling */
 @media screen and (max-width:475px) {
@@ -129,7 +132,9 @@
     }
 
     .header_content .right{
-        margin-top: 3rem;
+        margin-top: 2rem;
+        height: 17rem;
+        width: 17rem;
     }
     .fixedImage1{
         left: 0%;
@@ -139,6 +144,7 @@
     .contactPage .right form input, .right form textarea{
         font-size: 1.4rem;
     }
+   
 }
 /* very small gadget */
 @media screen and (min-width: 0px) and (max-width: 300px){
