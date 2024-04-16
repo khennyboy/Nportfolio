@@ -7,11 +7,6 @@ let overlay = document.querySelector('.overlay')
 
 let mode, check;
 
-let Project = [
-    {
-        
-    }
-]
 //detect user color mode and apply by default
 const prefersDarkColorScheme = ()=> {
     check =  window && window.matchMedia && 
@@ -97,16 +92,30 @@ document.body.addEventListener('click', function(e){
     }
 });
 
-// only display image after it has been loaded
-function loadImage(){
-    let image = document.querySelector('.header_content .right .profileImage')
-    let src = image.dataset.src
-    image.src = src
-    image.addEventListener('load', function(){
-        this.style.visibility = 'visible'
+function loadImage(url){
+    return new Promise(function(resolve, reject){
+        const image = new Image()
+        image.src = url
+        image.onload = ()=> resolve(image)
+        image.onerror = ()=> reject(new Error('Failed to load image'))
     })
 }
-loadImage()
+
+async function outputImage(){
+    try {
+        let image = document.querySelector('.header_content .right')
+        let src = image.dataset.src
+        let data = await loadImage(src)
+        data.setAttribute('class', 'profileImage')
+        data.setAttribute('alt', 'profile Image')
+        image.insertAdjacentElement('afterbegin', data)
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+outputImage()
+
 
 // add animation effect
 const sr = ScrollReveal({
@@ -115,6 +124,9 @@ const sr = ScrollReveal({
     reset: true
 })
 sr.reveal('.wrapper', {delay:200, origin:'left'})
+
+
+
 
 // const navHeight = document.querySelector('nav').getBoundingClientRect().height
 // console.log(navHeight)

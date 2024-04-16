@@ -410,7 +410,4 @@ footer h3{
     padding-top: 2rem;
     padding-bottom: 0;
 }
-/* to only display the image after it has been loaded */
-.header_content .right img{
-    visibility: hidden;
-}
+
