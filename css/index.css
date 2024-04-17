@@ -380,7 +380,11 @@ li.theme{
 .contactPage .right form input::placeholder{
     font-size: initial;
 }
-
+.contactPage .right form input:-webkit-autofill{
+    -webkit-text-fill-color: var(--textColor);
+    -webkit-background-clip: text;
+    background-color: var(--backgroundColor);
+}
 .contactPage .right textarea{
    border: 1px solid var(--border-color);
    resize: vertical;

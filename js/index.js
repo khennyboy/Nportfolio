@@ -125,6 +125,19 @@ const sr = ScrollReveal({
 })
 sr.reveal('.wrapper', {delay:200, origin:'left'})
 
+// contact function
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    emailjs.sendForm('sheriff_baba', 'template_8amrujf', this)
+        .then(function(response) {
+            console.log('Email sent:', response);
+            alert('Message sent successfully!');
+        }, function(error) {
+            console.error('Error sending email:', error);
+            alert('An error occurred. Please try again later.');
+        });
+});
+
 
 
 
