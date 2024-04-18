@@ -159,9 +159,9 @@ contactForm.addEventListener('submit', handleSubmit);
 
 
 // add animation effect
-// const sr = ScrollReveal({
-//     distance :'45px',
-//     duration:2000,
-//     reset: true
-// })
-// sr.reveal('.wrapper', {delay:200, origin:'left'})
+const sr = ScrollReveal({
+    distance :'45px',
+    duration:2000,
+    reset: true
+})
+sr.reveal('.wrapper', {delay:200, origin:'left'})
