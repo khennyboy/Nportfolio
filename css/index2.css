@@ -70,12 +70,19 @@
         bottom: -20%;
         right: 0%;
     }
-    .contactPage .right form input, .right form textarea{
+    .contactField input, .contactField textarea{
         font-size: 1.3rem;
     }
     nav.wrapper{
         padding-top: 2rem;
     }
+    .contactField span{
+        font-size: 1.2rem;
+    }
+    .statusMessage{
+        min-width: 50%;
+    }
+  
 }
 /* mobile styling */
 @media screen and (max-width:475px) {
@@ -141,8 +148,18 @@
         top: 5%;
         height: 100%;
     }
-    .contactPage .right form input, .right form textarea{
+    .contactField input, .contactField textarea{
         font-size: 1.4rem;
+    }
+    .contactField span{
+        font-size: 1.2rem;
+    }
+    .statusMessage{
+        min-width: 80%;
+    }
+   
+    .contactPage .left p{
+        font-size: 1.1rem;
     }
    
 }
@@ -174,7 +191,7 @@
     .project{
         padding: 2rem 1rem 4rem 1rem;
     }
-    .contactPage .right form input, .right form textarea{
+    .contactField input, .contactField textarea{
         font-size: 1.3rem;
     }
 }

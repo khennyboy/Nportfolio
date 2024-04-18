@@ -363,7 +363,7 @@ li.theme{
     display: block;
     position: relative;
 }
-.contactPage .right form input, .right form textarea{
+.contactField input, .contactField textarea{
     display: block;
     border: none;
     outline: none;
@@ -371,31 +371,37 @@ li.theme{
     color: var(--textColor);
     font-size: 1.1rem;
 }
-.contactPage .right form input{
+.contactField input{
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 2rem;
     width: 100%;
     padding: 1rem 0 0.5rem 0.5rem;
 }
-.contactPage .right form input::placeholder{
+.contactField{
+    margin-bottom: 1rem;
+}
+
+.message{
+    margin-top: 3rem;
+}
+.contactField input::placeholder{
     font-size: initial;
 }
-.contactPage .right form input:-webkit-autofill{
+.contactField input:-webkit-autofill{
     -webkit-text-fill-color: var(--textColor);
     -webkit-background-clip: text;
     background-color: var(--backgroundColor);
 }
-.contactPage .right textarea{
+.contactField textarea{
    border: 1px solid var(--border-color);
    resize: vertical;
    width: 100%;
    height: 8rem;
    border-radius: 5px;
    padding: 10px;
-   margin: 4rem 0 2rem;
    overflow: auto;
 }
-.contactPage .right textarea::-webkit-scrollbar{
+
+.contactField textarea::-webkit-scrollbar{
     display: none;
 }
 .right form button{
@@ -415,3 +421,48 @@ footer h3{
     padding-bottom: 0;
 }
 
+/* to disable button click */
+.notAllowed{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.statusMessage{
+    position: fixed;
+    padding: 1rem;;
+    top: 10px;
+    color: black;
+    background-color: rgb(247, 219, 219);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 30%;
+    overflow: hidden;
+    z-index: 1000;
+    transition: 0.3s linear;
+    opacity: 0;
+}
+
+.showStatusMessage{
+    opacity: 1;
+}
+.reject{
+    border-left: 5px solid red;
+}
+.accept{
+    border-left: 5px solid green;
+}
+
+.senderName, .senderEmail, .textMessage {
+    display: none;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+}
+.contactField >span{
+    color: red;
+}
+.notifyUser{
+    display: block;
+}

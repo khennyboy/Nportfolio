@@ -3,8 +3,10 @@ const toggleTheme = document.querySelector('.dropDownBtn')
 let themes = document.querySelector('.dropDownContent')
 let contactBtn = document.querySelector('.contactMe')
 let contactDiv = document.querySelector('.contactPage')
-let overlay = document.querySelector('.overlay')
-
+let contactForm = document.getElementById('contact-form')
+let submitBtn = contactForm.querySelector('.submitBtn')
+let statusMessage = document.querySelector('.statusMessage')
+let notify = document.querySelectorAll('.notify')
 let mode, check;
 
 //detect user color mode and apply by default
@@ -76,7 +78,6 @@ contactBtn.addEventListener('click', function(){
 
 //show theme icons upon click
 toggleTheme.addEventListener('click', function(){
-    console.log('hello')
     themes.classList.toggle('showDropContent')
 })
 
@@ -86,8 +87,9 @@ document.addEventListener('keydown', function (e) {
       themes.classList.remove('showDropContent')
     }
   });
+
 document.body.addEventListener('click', function(e){
-    if(e.target!=='toggleTheme' && !document.querySelector('.dropDownBtn').contains(e.target) && !document.querySelector('.dropDownContent').contains(e.target)){
+    if(!document.querySelector('.dropDownBtn').contains(e.target) && !document.querySelector('.dropDownContent').contains(e.target)){
         themes.classList.remove('showDropContent')
     }
 });
@@ -116,32 +118,50 @@ async function outputImage(){
 }
 outputImage()
 
-
-// add animation effect
-const sr = ScrollReveal({
-    distance :'45px',
-    duration:2000,
-    reset: true
-})
-sr.reveal('.wrapper', {delay:200, origin:'left'})
+// handle result of message
+function handleMessage(mode=true, res='Message sent successfully'){
+    submitBtn.disabled = false;
+    submitBtn.classList.remove('notAllowed')
+    mode && contactForm.reset()
+    statusMessage.innerHTML = "***" + res
+    mode && statusMessage.classList.add('showStatusMessage', 'accept')
+    !mode && statusMessage.classList.add('showStatusMessage','reject')
+    setTimeout(()=>statusMessage.classList.remove('showStatusMessage', 'reject', 'accept'), 2000)
+}
 
 // contact function
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+function handleSubmit(event){
     event.preventDefault();
+    notify.forEach((each)=>{
+        each.classList.remove('notifyUser')
+    })
+    let datas = [...new FormData(this)]
+    let match = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
+
+    let check = datas.filter((eachData, index)=>{
+        if(index!==1 && eachData[1].trim()==='') return eachData
+        if(index==1 && !match.test(eachData[1])) return eachData
+    })
+    check.forEach((each)=>{
+        document.querySelector(`.${each[0]}`).classList.add('notifyUser')
+    })
+    if(check.length!==0) return
+    submitBtn.disabled = true;
+    submitBtn.classList.add('notAllowed')
     emailjs.sendForm('sheriff_baba', 'template_8amrujf', this)
-        .then(function(response) {
-            console.log('Email sent:', response);
-            alert('Message sent successfully!');
+        .then(function() {
+            handleMessage()
         }, function(error) {
-            console.error('Error sending email:', error);
-            alert('An error occurred. Please try again later.');
+            handleMessage(false, error)
         });
-});
+}
+contactForm.addEventListener('submit', handleSubmit);
 
 
-
-
-// const navHeight = document.querySelector('nav').getBoundingClientRect().height
-// console.log(navHeight)
-// let x =  document.querySelector('nav')
-// console.log(window.getComputedStyle(x).height)
+// add animation effect
+// const sr = ScrollReveal({
+//     distance :'45px',
+//     duration:2000,
+//     reset: true
+// })
+// sr.reveal('.wrapper', {delay:200, origin:'left'})

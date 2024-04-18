@@ -11,7 +11,7 @@
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script type="text/javascript">
+    <script type="text/javascript" >
         (function() {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({
@@ -21,7 +21,6 @@
     </script>
     <script src="https://unpkg.com/scrollreveal" ></script>
     <script src="./js/index.js" defer></script>
-
 </head>
 <body>
    <header>
@@ -225,14 +224,25 @@
     </div>
     <div class="right">
         <form action="#" novalidate spellcheck="false" id="contact-form" >
-            <input type="text" placeholder="NAME" name="senderName">
-            <input type="email" placeholder="EMAIL" name="senderEmail">
-            <textarea name="message" id="message" placeholder="MESSAGE"></textarea>
-            <button type="submit" class="specialBtn submitBtn">SEND MESSAGE</button>
+            <div class="text contactField">
+                <input type="text" placeholder="NAME" name="senderName">
+                <span class="senderName notify">***This can't be empty</span>
+            </div>
+           
+            <div class="email contactField">
+                <input type="email" placeholder="EMAIL" name="senderEmail">
+                <span class="senderEmail notify">***Please enter a valid email address</span>
+            </div>
+            <div class="message contactField">
+                <textarea name="textMessage" id="message" placeholder="MESSAGE"></textarea>
+                <span class="textMessage notify">***This cant be empty</span>
+            </div>
+                <button type="submit" class="specialBtn submitBtn">SEND MESSAGE</button>        
         </form>
     </div>
    </section>
 </div>
+
 
 <!-- another section -->
 <div class="wrapper sectionDiv">
@@ -247,5 +257,6 @@
    </footer>
 </div>
 
+<div class="statusMessage"></div> 
 </body>
 </html>
