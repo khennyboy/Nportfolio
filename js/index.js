@@ -119,9 +119,10 @@ async function outputImage(){
 outputImage()
 
 // handle result of message
-function handleMessage(mode=true, res='Message sent successfully'){
+function handleMessage(mode=true, res='Message sent successfully', mes='SEND MESSAGE'){
     submitBtn.disabled = false;
     submitBtn.classList.remove('notAllowed')
+    submitBtn.innerHTML = mes
     mode && contactForm.reset()
     statusMessage.innerHTML = "***" + res
     mode && statusMessage.classList.add('showStatusMessage', 'accept')
@@ -148,6 +149,7 @@ function handleSubmit(event){
     if(check.length!==0) return
     submitBtn.disabled = true;
     submitBtn.classList.add('notAllowed')
+    submitBtn.innerHTML = 'Please wait'
     emailjs.sendForm('sheriff_baba', 'template_8amrujf', this)
         .then(function() {
             handleMessage()
