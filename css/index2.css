@@ -1,18 +1,29 @@
 /* tablet styling */
 @media screen and (max-width:867px){
-    html{
-        font-size: 70%;
+    body{
+        font-size: 14px;
     }
     .wrapper{
         padding: 0 2rem;
     }
+    nav.wrapper{
+        top: 10px;
+    }
+    nav.wrapper h3{
+        font-size: 2em;
+        margin-right: 10%;
+    }
     .dropDownContent{
-        left: -7rem;
+        left: -4rem;
     }
     .header_content{
         flex-direction:column-reverse;
         justify-content: center;
         row-gap: 1rem;
+    }
+    .header_content .right{
+        width: 15rem;
+        height: 15rem;
     }
     .header_content .left{
         text-align: center;
@@ -21,8 +32,11 @@
         display: none;
     }
     .header_content .left h3{
-        padding: 1rem 0;
-        font-size: 2.3rem;
+        font-size: 2.3em;
+        margin-bottom: 1rem;
+    }
+    .header_content .left p{
+        margin-bottom: 1rem;
     }
     .header_content .left p br{
         display: none;
@@ -60,8 +74,8 @@
     .contactPage .right{
         width: 75%;
     }
-    .contactPage .left p, .header_content .left p{
-        font-size: 1.4rem;
+    .contactPage .left p{
+        font-size: 1.4em;
     }
     .starrp{
         left: 0%;
@@ -76,9 +90,7 @@
     nav.wrapper{
         padding-top: 2rem;
     }
-    .contactField span{
-        font-size: 1.2rem;
-    }
+ 
     .statusMessage{
         min-width: 50%;
     }
@@ -87,28 +99,36 @@
 /* mobile styling */
 @media screen and (max-width:475px) {
    
-    html{
-        font-size: 75%;
+    body{
+        font-size: 11px;
     }
     .wrapper{
         padding: 0 1rem;
     }
   
     nav.wrapper{
-        flex-direction: column;
+        flex-wrap: wrap;
         row-gap: 10px;
-        padding-top: 2rem;
+        top:10px;
         text-align: center;
+        justify-content: center;
     }
+    nav.wrapper h3{
+        width: 100%;
+        margin-right: 0;
+    }
+
     .dropDownContent{
         left: -4rem;
     }
   
     .header_content .left h3{
-        font-size: 2rem;
+        font-size: 2.3em;
+        margin-bottom: 10px;
     }
     .header_content .left p{
-        font-size: 1.13rem;
+        font-size: 1.3em;
+        margin-bottom: 10px;
     }
    
     .header_content{
@@ -139,29 +159,32 @@
     }
 
     .header_content .right{
-        margin-top: 2rem;
-        height: 17rem;
-        width: 17rem;
+        height: 13rem;
+        width: 13rem;
     }
     .fixedImage1{
         left: 0%;
         top: 5%;
         height: 100%;
     }
-    .contactField input, .contactField textarea{
-        font-size: 1.4rem;
-    }
-    .contactField span{
-        font-size: 1.2rem;
-    }
+   
     .statusMessage{
         min-width: 80%;
     }
-   
-    .contactPage .left p{
-        font-size: 1.1rem;
+
+    .specialBtn{
+        font-size: 17px;
     }
-   
+    .liveUrl i{
+        font-size: 1.4em;
+    }
+    i{
+        font-size: 1.2em;
+    }
+    .opacBg{
+        background-size: contain;
+        background-position: center;
+    }
 }
 /* very small gadget */
 @media screen and (min-width: 0px) and (max-width: 300px){
