@@ -93,7 +93,9 @@
     .project, .contactPage,.skills{
         margin-bottom: 70px;
     }
-  
+    .projectImage img{
+        height: 18rem;
+    }
 }
 /* mobile styling */
 @media screen and (max-width:475px) {
@@ -187,6 +189,9 @@
     .headerBtns{
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .projectImage img{
+        height: 15rem;
     }
 }
 /* very small gadget */
