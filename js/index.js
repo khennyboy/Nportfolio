@@ -116,7 +116,7 @@ async function outputImage(){
         console.error(error)
     }
 }
-outputImage()
+// outputImage()
 
 // handle result of message
 function handleMessage(mode=true, res='Message sent successfully', mes='SEND MESSAGE'){
@@ -160,9 +160,9 @@ function handleSubmit(event){
 contactForm.addEventListener('submit', handleSubmit);
 
 // add animation effect
-const sr = ScrollReveal({
-    distance :'45px',
-    duration:2000,
-    reset: true
-})
-sr.reveal('.wrapper', {delay:200, origin:'left'})
+// const sr = ScrollReveal({
+//     distance :'45px',
+//     duration:2000,
+//     reset: true
+// })
+// sr.reveal('.wrapper', {delay:200, origin:'left'})

@@ -1,17 +1,18 @@
 /* tablet styling */
 @media screen and (max-width:867px){
-    body{
-        font-size: 14px;
-    }
+   
     .wrapper{
-        padding: 0 2rem;
+        width: 90%;
     }
-    nav.wrapper{
-        top: 10px;
+    nav{
+        top: 1rem;
     }
-    nav.wrapper h3{
-        font-size: 2em;
+    nav > h3{
+        font-size: 1.8rem;
         margin-right: 10%;
+    }
+    p{
+        font-size: 1.125rem;
     }
     .dropDownContent{
         left: -4rem;
@@ -28,11 +29,11 @@
     .header_content .left{
         text-align: center;
     }
-    .header_content .left h3 br{
+    .intro br{
         display: none;
     }
-    .header_content .left h3{
-        font-size: 2.3em;
+   .intro{
+        font-size: 2rem;
         margin-bottom: 1rem;
     }
     .header_content .left p{
@@ -58,14 +59,10 @@
         grid-template-columns: 75%;
     }
     /* another section */
-    .contactPage .right form .submitBtn{
-        font-size: 15px;
-        justify-content: center;
-    }
+   
     .contactPage{
         flex-direction: column;
         align-items:flex-start;
-        margin-bottom: 4rem;
     }
     .contactPage .left{
         width: 90%;
@@ -74,9 +71,7 @@
     .contactPage .right{
         width: 75%;
     }
-    .contactPage .left p{
-        font-size: 1.4em;
-    }
+  
     .starrp{
         left: 0%;
     }
@@ -87,47 +82,52 @@
     .contactField input, .contactField textarea{
         font-size: 1.3rem;
     }
-    nav.wrapper{
-        padding-top: 2rem;
-    }
- 
+   
     .statusMessage{
         min-width: 50%;
+    }
+    footer{
+        margin-top: 100px;
+    }
+    .project, .contactPage,.skills{
+        margin-bottom: 70px;
     }
   
 }
 /* mobile styling */
 @media screen and (max-width:475px) {
-   
-    body{
-        font-size: 11px;
-    }
+
     .wrapper{
-        padding: 0 1rem;
+       width: 95%;
     }
-  
-    nav.wrapper{
+    p{
+        font-size: 1rem;
+    }
+    span{
+        font-size: 0.875rem;
+    }
+ 
+    nav{
         flex-wrap: wrap;
         row-gap: 10px;
-        top:10px;
         text-align: center;
         justify-content: center;
     }
-    nav.wrapper h3{
+    nav > h3{
         width: 100%;
         margin-right: 0;
+        font-size: 1.4rem;
     }
 
     .dropDownContent{
         left: -4rem;
     }
   
-    .header_content .left h3{
-        font-size: 2.3em;
+   .intro{
+        font-size: 1.25rem;
         margin-bottom: 10px;
     }
     .header_content .left p{
-        font-size: 1.3em;
         margin-bottom: 10px;
     }
    
@@ -172,22 +172,24 @@
         min-width: 80%;
     }
 
-    .specialBtn{
-        font-size: 17px;
-    }
-    .liveUrl i{
-        font-size: 1.4em;
-    }
     i{
-        font-size: 1.2em;
+        font-size: 1.2rem;
     }
     .opacBg{
         background-size: contain;
         background-position: center;
     }
+    footer{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .headerBtns{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 /* very small gadget */
-@media screen and (min-width: 0px) and (max-width: 300px){
+@media screen and (min-width: 0px) and (max-width: 340px){
     .headerBtns{
         flex-direction: column;
         align-items: center;
@@ -198,7 +200,8 @@
     }
     .header_content .right{
         margin-top: 3rem;
-    }   
+    } 
+    
 }
 /* large desktop styling */
 @media screen and (min-width: 869px) and (max-width: 1200px){
