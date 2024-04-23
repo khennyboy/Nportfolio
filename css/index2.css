@@ -38,6 +38,7 @@
     }
     .header_content .left p{
         margin-bottom: 1rem;
+        line-height: initial;
     }
     .header_content .left p br{
         display: none;
