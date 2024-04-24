@@ -211,11 +211,15 @@
 }
 /* large desktop styling */
 @media screen and (min-width: 869px) and (max-width: 1200px){
-    .wrapper{
-        padding: 0 3rem;
+    nav > h3{
+        margin-right: 30%;
     }
-    html{
-        font-size: 80%;
+    .header_content .right {
+        height: 16rem;
+        width: 16rem;
+    }
+    .intro{
+        font-size: 2.5rem;
     }
     .dropDownContent{
         left: -4rem;
@@ -229,8 +233,16 @@
 }
 /* ultra large desktop */
 @media screen and (min-width: 1201px) and (max-width: 1500px){
-    .wrapper{
-        padding: 0 5rem;
+    .header_content .right {
+        height: 17rem;
+        width: 17rem;
+        margin-top: 3rem;
+    }
+    nav > h3{
+        margin-right: 40%;
+    }
+    .intro{
+        font-size: 3rem;
     }
     html{
         font-size: 90%;
@@ -242,4 +254,5 @@
         width: 16rem;
         margin-top: 3rem;
     }
+    
 }
