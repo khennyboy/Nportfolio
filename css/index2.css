@@ -6,7 +6,6 @@
     }
     nav{
         top: 1rem;
-        width: 90%;
     }
     nav > h3{
         font-size: 1.8rem;
@@ -104,9 +103,7 @@
     .wrapper{
        width: 95%;
     }
-    nav{
-        width: 95%;
-    }
+
     p{
         font-size: 1rem;
     }
