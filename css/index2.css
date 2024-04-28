@@ -6,6 +6,7 @@
     }
     nav{
         top: 1rem;
+        width: 90%;
     }
     nav > h3{
         font-size: 1.8rem;
@@ -22,9 +23,9 @@
         justify-content: center;
         row-gap: 1rem;
     }
-    .header_content .right{
-        width: 15rem;
-        height: 15rem;
+    .header_content .profileImage{
+        width: 13rem;
+        height: 13rem;
     }
     .header_content .left{
         text-align: center;
@@ -103,6 +104,9 @@
     .wrapper{
        width: 95%;
     }
+    nav{
+        width: 95%;
+    }
     p{
         font-size: 1rem;
     }
@@ -161,9 +165,9 @@
         width: 90%;
     }
 
-    .header_content .right{
-        height: 13rem;
-        width: 13rem;
+    .header_content .projectImage{
+        height: 10rem;
+        width: 10rem;
     }
     .fixedImage1{
         left: 0%;
@@ -204,7 +208,7 @@
     .dropDownContent{
         left: -7rem;
     }
-    .header_content .right{
+    .header_content .projectImage{
         margin-top: 3rem;
     } 
     
@@ -214,9 +218,9 @@
     nav > h3{
         margin-right: 30%;
     }
-    .header_content .right {
-        height: 16rem;
-        width: 16rem;
+    .header_content .projectImage {
+        height: 13rem;
+        width: 13rem;
     }
     .intro{
         font-size: 2.5rem;
@@ -233,9 +237,9 @@
 }
 /* ultra large desktop */
 @media screen and (min-width: 1201px) and (max-width: 1500px){
-    .header_content .right {
-        height: 17rem;
-        width: 17rem;
+    .header_content .projectImage {
+        height: 14rem;
+        width: 14rem;
         margin-top: 3rem;
     }
     nav > h3{
