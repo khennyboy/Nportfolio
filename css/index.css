@@ -99,11 +99,14 @@ span{
 nav{
     position: fixed;
     display: flex;
-    width: 85%;
+    width: 100%;
     top: 3rem;
     align-items: center;
     z-index: 100;
     justify-content: space-between;
+    left:0;
+    right:0;
+    margin: 0 auto;
 }
 
 nav > h1{
