@@ -243,4 +243,4 @@ const sr = ScrollReveal({
     duration:2000,
     reset: true
 })
-sr.reveal('.wrapper', {delay:200, origin:'left'})
+sr.reveal('.animate', {delay:200, origin:'left'})
