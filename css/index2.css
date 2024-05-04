@@ -114,6 +114,7 @@
     footer{
         flex-direction: column;
         justify-content: center;
+        margin-bottom: 50px;
     }    
     .contactPage{
         grid-template-columns: 90%;

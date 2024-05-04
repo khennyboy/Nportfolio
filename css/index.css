@@ -408,7 +408,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 100px;
 }
 
 footer h3{
