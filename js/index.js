@@ -69,16 +69,16 @@ let skills = [
         name:'Javascript'
     },
     {
-        image:'./images/TailwindImage.jpg',
+        image:'./images/TailwindImage.webp',
         name:'Tailwindcss',
         autofill: true
     },
     {
-        image:'./images/ReactImage.jpg',
+        image:'./images/ReactImage.webp',
         name:'ReactJs'
     },
     {
-        image:'./images/TypeScript.jpg',
+        image:'./images/TypeScript.web',
         name:'TypeScript'
     },
     {
