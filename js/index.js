@@ -78,7 +78,7 @@ let skills = [
         name:'ReactJs'
     },
     {
-        image:'./images/TypeScript.web',
+        image:'./images/TypeScript.webp',
         name:'TypeScript'
     },
     {
