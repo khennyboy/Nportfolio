@@ -78,11 +78,11 @@ let skills = [
         name:'ReactJs'
     },
     {
-        image:'/.imagesTypeScript.jpg',
+        image:'./images/TypeScript.jpg',
         name:'TypeScript'
     },
     {
-        image: './images/ReduxImage.png',
+        image: './images/ReduxImage.webp',
         name:'Redux',
         autofill:true
     },
