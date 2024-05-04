@@ -61,28 +61,28 @@ let skills = [
         name:'Html5'
     },
     {
-        image:'./images/CssImage.jpg"',
+        image:'./images/CssImage.jpg',
         name:'Css3'
     },
     {
-        image:'./images/JsImage.jpg"',
+        image:'./images/JsImage.jpg',
         name:'Javascript'
     },
     {
-        image:'./images/TailwindImage.jpg"',
+        image:'./images/TailwindImage.jpg',
         name:'Tailwindcss',
         autofill: true
     },
     {
-        image:'"./images/ReactImage.jpg"',
+        image:'./images/ReactImage.jpg',
         name:'ReactJs'
     },
     {
-        image:'".imagesTypeScript.jpg"',
+        image:'/.imagesTypeScript.jpg',
         name:'TypeScript'
     },
     {
-        image: './images/ReduxImage',
+        image: './images/ReduxImage.png',
         name:'Redux',
         autofill:true
     },
