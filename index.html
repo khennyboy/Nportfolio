@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Here is my Portfolio">
     <title>Sheriff's &mdash; Portfolio</title>
+    <link rel="icon" href="images/favicon.png" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="./images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="./css/index.css">
@@ -34,14 +32,24 @@
 </head>
 <body>
    <header class="wrapper">
-    <nav>
-        <h1>SheriffBaba</h1>
-       <a href="https://github.com/khennyboy" class="liveUrl"><i class='bx bxl-github'></i></a>
-       <a href="https://www.linkedin.com/in/sheriff-abdullateef-kehinde-3b7545249" class="liveUrl"><i class='bx bxl-linkedin-square'></i></a>
-       <a href="https://www.https://twitter.com/Abdullatee28061" class="liveUrl"><i class='bx bxl-twitter' ></i></a>
-       <a href="https://www.instagram.com/abidemi4339/?hl=en" class="liveUrl"><i class='bx bxl-instagram' ></i></a>
+    <nav class="wrapper">
+        <h1>Sheriff</h1>
+       <a href="https://github.com/khennyboy" class="liveUrl" aria-label="githublink">
+        <i class='bx bxl-github'></i>
+        </a>
+       <a href="https://www.linkedin.com/in/sheriff-abdullateef-kehinde-3b7545249" class="liveUrl" aria-label="linkedin link">
+        <i class='bx bxl-linkedin-square'></i>
+        </a>
+       <a href="https://www.https://twitter.com/Abdullatee28061" class="liveUrl" aria-label="twitter link">
+        <i class='bx bxl-twitter' ></i>
+        </a>
+       <a href="https://www.instagram.com/abidemi4339/?hl=en" class="liveUrl" aria-label="instagram link">
+        <i class='bx bxl-instagram' ></i>
+        </a>
        <div class="theme">
-        <button class="dropDownBtn"><i class='bx bxs-sun'></i></button>
+        <button class="dropDownBtn" aria-label="change theme" type="button">
+            <i class='bx bxs-sun'></i>
+         </button>
         <div class="dropDownContent">
             <div class="dropBtn" data-color="system">
              <i class='bx bx-desktop dropIcons'></i>
@@ -73,8 +81,8 @@
                <i class='bx bx-download' ></i>
                 <span>Resume</span>
             </a>
-            <button class="specialBtn contactMe">
-            <i class='bx bx-message-dots'></i>
+            <button class="specialBtn contactMe" type="button">
+                <i class='bx bx-message-dots'></i>
                 <span>Contact me!</span>
             </button>
     </div>  
@@ -83,25 +91,25 @@
     </main>
    </header>
 
-<div class="wrapper">
-   <section class="skills">
-     <h3 class="sectionName">Skills</h3>
-<div class="allSkills">
-<!-- injected from JS -->
-</div>
-   </section>
+    <div class="wrapper">
+    <section class="skills">
+        <h3 class="sectionName">Skills</h3>
+    <div class="allSkills">
+    <!-- injected from JS -->
+    </div>
+    </section>
 
-</div>
+    </div>
 
-<!-- another section -->
-<div class="wrapper">
-   <section class="project">
-        <h3 class="sectionName">Projects</h3>        
-<div class="allProject">
-   <!-- Injected from JS -->
-</div>
-   </section>
-</div>
+    <!-- another section -->
+    <div class="wrapper">
+    <section class="project">
+            <h3 class="sectionName">Projects</h3>        
+    <div class="allProject">
+    <!-- Injected from JS -->
+    </div>
+    </section>
+    </div>
 
 <!-- another section -->
 <div class="wrapper">
@@ -113,8 +121,7 @@
             i would get back to you as soon as possible.
         </p>
     </div>
-    <div class="right">
-        <form action="#" novalidate spellcheck="false" id="contact-form" >
+    <form action="#" novalidate spellcheck="false" id="contact-form" >
             <div class="text contactField">
                 <input type="text" placeholder="Name" name="senderName">
                 <span class="senderName notify">***This can't be empty</span>
@@ -124,26 +131,34 @@
                 <input type="email" placeholder="Email" name="senderEmail">
                 <span class="senderEmail notify">***Please enter a valid email address</span>
             </div>
+            
             <div class="message contactField">
                 <textarea name="textMessage" id="message" placeholder="Message"></textarea>
                 <span class="textMessage notify">***This cant be empty</span>
             </div>
-                <button type="submit" class="specialBtn submitBtn">SEND MESSAGE</button>        
-        </form>
-    </div>
+            <button type="submit" class="specialBtn submitBtn">SEND MESSAGE</button>        
+    </form>
    </section>
 </div>
 
 
 <!-- another section -->
 <div class="wrapper">
-   <footer >
+   <footer>
     <h3>Sheriff Baba</h3>
     <div>
-        <a href="https://github.com/khennyboy" class="liveUrl" title="github link"><i class='bx bxl-github' ></i></a>
-        <a href="https://www.linkedin.com/in/sheriff-abdullateef-kehinde-3b7545249" class="liveUrl" title="linkedin link"><i class='bx bxl-linkedin-square' ></i></a>
-        <a href="https://www.https://twitter.com/Abdullatee28061" class="liveUrl" title="twitter link"><i class='bx bxl-twitter' ></i></a>
-        <a href="https://www.instagram.com/abidemi4339/?hl=en" class="liveUrl" title="instagram link"><i class='bx bxl-instagram' ></i></a>
+        <a href="https://github.com/khennyboy" class="liveUrl" aria-label="github link">
+            <i class='bx bxl-github' ></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sheriff-abdullateef-kehinde-3b7545249" class="liveUrl" aria-label="linkedin link">
+            <i class='bx bxl-linkedin-square' ></i>
+        </a>
+        <a href="https://www.https://twitter.com/Abdullatee28061" class="liveUrl" aria-label="twitter link">
+            <i class='bx bxl-twitter' ></i>
+        </a>
+        <a href="https://www.instagram.com/abidemi4339/?hl=en" class="liveUrl"  aria-label="instagram link">
+            <i class='bx bxl-instagram' ></i>
+        </a>
     </div>
    </footer>
 </div>

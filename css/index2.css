@@ -1,202 +1,147 @@
 /* tablet styling */
-@media screen and (max-width:867px){
-   
+@media screen and (max-width:55em){
+    html{
+        font-size: 50%;
+    }
+    .header_content::after{
+        background-position: center;
+    }
     .wrapper{
         width: 90%;
     }
-    nav{
-        top: 1rem;
+    .starrp{
+        left: 0;
     }
-    nav > h3{
-        font-size: 1.8rem;
-        margin-right: 10%;
+    .star1{
+        right:0;
     }
-    p{
-        font-size: 1.125rem;
-    }
-    .dropDownContent{
-        left: -4rem;
-    }
-    .header_content{
-        flex-direction:column-reverse;
+   .header_content{
+        flex-direction: column-reverse;
         justify-content: center;
-        row-gap: 1rem;
+   }
+   .header_content .profileImage{
+        margin-bottom: 3rem;
+   }
+   .header_content .left p br, .intro br{
+        display: none;
     }
-    .header_content .profileImage{
-        width: 13rem;
-        height: 13rem;
+    .header_content .left p{
+        font-size: 2rem;
     }
     .header_content .left{
         text-align: center;
     }
-    .intro br{
-        display: none;
+    .intro{
+        letter-spacing: 0px;
+        font-size: 3.5rem;
     }
-   .intro{
-        font-size: 2rem;
-        margin-bottom: 1rem;
+    .dropDownContent{
+        left: -8rem;
     }
-    .header_content .left p{
-        margin-bottom: 1rem;
-        line-height: initial;
-    }
-    .header_content .left p br{
-        display: none;
-    }
-    
     .headerBtns{
-        justify-content: space-evenly;
+       justify-content: center;
     }
-   
-    /* another section */
+    nav{
+        gap: 2rem;
+        top: 1rem;
+    }
+    i{
+        font-size: 2.8rem;
+    }
+    .dropDownContent{
+        min-width: 120px;
+    }
     .allSkills{
         grid-template-columns: 48% 48%;
     }
-    /* another section */
-    .project{
-        padding: 2rem 1rem 4rem 1rem;
-    }
     .allProject{
-        grid-template-columns: 75%;
+        grid-template-columns: 85%;
     }
-    /* another section */
-   
     .contactPage{
-        flex-direction: column;
-        align-items:flex-start;
+        grid-template-columns: 85%;
+        gap: 3rem;
     }
-    .contactPage .left{
-        width: 90%;
-        padding-bottom: 3rem;
+    .contactField{
+        margin-bottom: 2rem;
     }
-    .contactPage .right{
-        width: 75%;
+    .message{
+        margin-top: 4rem;
     }
-  
-    .starrp{
-        left: 0%;
+    form input, form textarea{
+        font-size: 2.2rem;
     }
-    .star1{
-        bottom: -20%;
-        right: 0%;
+    input::placeholder, textarea::placeholder{
+        font-size: 1.8rem;
     }
-    .contactField input, .contactField textarea{
-        font-size: 1.3rem;
-    }
-   
-    .statusMessage{
-        min-width: 50%;
-    }
-    footer{
-        margin-top: 100px;
-    }
-    .project, .contactPage,.skills{
-        margin-bottom: 70px;
-    }
-    .projectImage img{
-        height: 18rem;
-    }
+
 }
 /* mobile styling */
-@media screen and (max-width:475px) {
-
+@media screen and (max-width:30em) {
     .wrapper{
        width: 95%;
     }
-
-    p{
-        font-size: 1rem;
-    }
-    span{
-        font-size: 0.875rem;
-    }
- 
-    nav{
-        flex-wrap: wrap;
-        row-gap: 10px;
-        text-align: center;
-        justify-content: center;
-    }
-    nav > h3{
+    .header_content .left{
         width: 100%;
-        margin-right: 0;
-        font-size: 1.4rem;
     }
-
-    .dropDownContent{
-        left: -4rem;
-    }
-  
-   .intro{
-        font-size: 1.25rem;
-        margin-bottom: 10px;
+    .intro{
+        font-size: 3.2rem;
     }
     .header_content .left p{
-        margin-bottom: 10px;
+        font-size: 1.7rem;
     }
-   
-    .header_content{
-        row-gap: 1.2rem;
+    .header_content .profileImage{
+        width: 25rem;
+        height: 25rem;
+        margin-top: 2rem;
     }
-    .specialBtn{
-        min-width: 140px;
-    }
-    /* another section */
     .allSkills{
-        grid-template-columns: 95%;
+        grid-template-columns: 100%;
     }
-    /* another section */
-   
     .allProject{
         grid-template-columns: 100%;
     }
-    .eachProject > div{
-        width: 95%;
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px;
+        top: 5px;
     }
-    /* another section */
-    .contactPage{
-        align-items: center;
-        margin-bottom: 5rem;
-    }
-    .contactPage .right{
-        width: 90%;
-    }
-
-    .header_content .projectImage{
-        height: 10rem;
-        width: 10rem;
-    }
-    .fixedImage1{
-        left: 0%;
-        top: 5%;
-        height: 100%;
-    }
-   
-    .statusMessage{
-        min-width: 80%;
-    }
-
-    i{
-        font-size: 1.2rem;
-    }
-    .opacBg{
-        background-size: contain;
-        background-position: center;
+    nav h1{
+        width: 100%;
+        text-align: center;
     }
     footer{
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
+    }    
+    .contactPage{
+        grid-template-columns: 90%;
     }
     .headerBtns{
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
     }
-    .projectImage img{
-        height: 15rem;
+    .headerBtns > *:first-child{
+        position: relative;
+        left: -2rem;
+    }
+    .headerBtns >*:nth-child(2){
+        position: relative;
+        left: 3rem;
+    }
+    .projectImage{
+        height: 250px;
+    }
+    .contactField span{
+        font-size: 1.8rem;
+    }
+    .skills, .project, .contactPage{
+        margin-bottom: 100px;
     }
 }
-/* very small gadget */
-@media screen and (min-width: 0px) and (max-width: 340px){
+/* very small gadget 340px*/
+@media screen and (min-width: 0px) and (max-width: 22em){
     .headerBtns{
         flex-direction: column;
         align-items: center;
@@ -210,46 +155,32 @@
     } 
     
 }
-/* large desktop styling */
-@media screen and (min-width: 869px) and (max-width: 1200px){
-    nav > h3{
-        margin-right: 30%;
+/* large desktop styling 869-1200 */
+@media screen and (min-width: 55em) and (max-width:75em ){
+    .wrapper{
+        width: 90%;
     }
-    .header_content .projectImage {
-        height: 13rem;
-        width: 13rem;
-    }
-    .intro{
-        font-size: 2.5rem;
+    html{
+        font-size: 50%;
     }
     .dropDownContent{
-        left: -4rem;
+        left: -150%;
     }
-    .project{
-        padding: 2rem 1rem 4rem 1rem;
-    }
-    .contactField input, .contactField textarea{
-        font-size: 1.3rem;
+    .contactPage{
+        grid-template-columns: 45% 45%;
     }
 }
 /* ultra large desktop */
-@media screen and (min-width: 1201px) and (max-width: 1500px){
-    .header_content .projectImage {
-        height: 14rem;
-        width: 14rem;
-        margin-top: 3rem;
-    }
-    nav > h3{
-        margin-right: 40%;
-    }
-    .intro{
-        font-size: 3rem;
-    }
+@media screen and (min-width: 75.1em) and (max-width: 94em){
+
     html{
-        font-size: 90%;
+        font-size: 56.25%;
+    }
+    .dropDownContent{
+        left: -100%;
     }
 }
-@media screen and (max-width:867px) and  (orientation: landscape){
+@media screen and (max-width:55em) and  (orientation: landscape){
     .header_content .right {
         height: 16rem;
         width: 16rem;
