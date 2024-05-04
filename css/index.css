@@ -354,7 +354,7 @@ form input, form textarea{
     color: var(--textColor);
     font-size: 1.8rem
 }
-form input:focus{
+input:focus, textarea:focus{
     outline: none;
 }
 input[type='text'], input[type='email']{
@@ -366,7 +366,7 @@ input[type='text'], input[type='email']{
     margin-bottom: 1rem;
 }
 .message{
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 input::placeholder, textarea::placeholder{

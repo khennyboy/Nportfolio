@@ -87,7 +87,8 @@
         font-size: 3.2rem;
     }
     .header_content .left p{
-        font-size: 1.7rem;
+        font-size: 1.8rem;
+        font-weight: 600;
     }
     .header_content .profileImage{
         width: 25rem;
@@ -153,7 +154,10 @@
     .header_content .projectImage{
         margin-top: 3rem;
     } 
-    
+    .header_content .left p{
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
 }
 /* large desktop styling 869-1200 */
 @media screen and (min-width: 55em) and (max-width:75em ){

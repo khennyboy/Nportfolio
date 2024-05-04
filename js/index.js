@@ -237,7 +237,7 @@ function handleSubmit(event){
 }
 contactForm.addEventListener('submit', handleSubmit);
 
-add animation effect
+// add animation effect
 const sr = ScrollReveal({
     distance :'45px',
     duration:2000,
