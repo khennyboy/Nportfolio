@@ -51,7 +51,11 @@ let projects = [
         image : './images/DrawApp.png',
         name:'DrawApp',
         url : ['https://github.com/khennyboy/DrawingApp.git', 'https://fundrawapp.netlify.app' ]
-        
+    },
+    {
+        image : './images/active-states-basket-empty.jpg',
+        name: 'E-commerce Website',
+        url : ['https://github.com/khennyboy/E-commerce.git', 'https://sheriffshoe-store.netlify.app' ]
     },
 ]
 
