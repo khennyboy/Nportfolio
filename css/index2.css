@@ -101,6 +101,7 @@
     .allProject{
         grid-template-columns: 100%;
     }
+   
     nav{
         flex-wrap: wrap;
         justify-content: center;
